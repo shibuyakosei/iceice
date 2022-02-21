@@ -1,26 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <ice_info></ice_info>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ice_info from "./components/ice_info.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    ice_info,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
