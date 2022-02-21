@@ -31,11 +31,6 @@ export default {
   },
 };
 console.log(ice);
-
-// for (const item of ice) {
-//   ice.img_path = require(item.img_path);
-//   console.log(ice.img_path);
-// }
 </script>
 
 <style>
