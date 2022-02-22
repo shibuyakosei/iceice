@@ -1,13 +1,13 @@
 <template>
-  <ice_info></ice_info>
+  <iceInfo />
 </template>
 
 <script>
-import ice_info from "./components/ice_info.vue";
+import iceInfo from "./components/ice_info.vue";
 
 export default {
   components: {
-    ice_info,
+    iceInfo,
   },
 };
 </script>
