@@ -14,33 +14,45 @@
     <div class="item">
       <p>{{ ice[$route.params.id - 1].price }}</p>
     </div>
-    <button @click="dialog = 'wantList'">ほしい物リストに追加</button>
-    <div v-if="dialog === 'wantList'" id="overlay">
-      <div class="btnDialog">
-        <div>商品をほしい物リストに追加しました</div>
-        <btn @click="dialog = false">閉じる</btn>
-      </div>
+    <div class="item">
+      <p>{{ ice[$route.params.id - 1].experience }}</p>
     </div>
-    <button @click="dialog = 'cart'">カートに入れる</button>
-    <div v-if="dialog === 'cart'" id="overlay">
-      <div class="btnDialog">
-        <div>商品をカートに追加しました</div>
-        <btn @click="dialog = false">閉じる</btn>
-      </div>
-    </div>
+    <btn
+      :btntag="ほしい物リストに追加"
+      @click="notificationContent = '商品をほしい物リストに追加しました'"
+    >
+      ほしい物リストに追加
+    </btn>
+
+    <btn
+      :btntag="yeah"
+      @click="notificationContent = '商品をカートに追加しました'"
+    >
+    </btn>
+    <btnDialog
+      :notificationContent="notificationContent"
+      @close="notificationContent = ''"
+    ></btnDialog>
   </div>
 </template>
 
 <script>
 import { ice } from "../data/ice.js";
 import { ref } from "vue";
+import btnDialog from "./dialog.vue";
+import btn from "./btn.vue";
 export default {
+  components: { btnDialog, btn },
   setup() {
     console.log("a");
     const dialog = ref(false);
+    const notificationContent = ref("");
+    const yeah = "yeah";
     return {
       dialog,
       ice,
+      notificationContent,
+      yeah,
     };
   },
   // data: function () {
