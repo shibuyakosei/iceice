@@ -1,38 +1,35 @@
 <template>
-  <div>
+  <div class="all">
     <p>
       トップページ >
       <router-link :to="{ name: 'home' }">商品一覧</router-link> >
       {{ ice[$route.params.id - 1].name }}
     </p>
-    <div class="item">
-      <img class="ice" v-bind:src="ice[$route.params.id - 1].img_path" />
-    </div>
-    <div class="item">
-      <p>{{ ice[$route.params.id - 1].name }}</p>
-    </div>
-    <div class="item">
-      <p>{{ ice[$route.params.id - 1].price }}</p>
-    </div>
-    <div class="item">
-      <p>{{ ice[$route.params.id - 1].experience }}</p>
-    </div>
-    <btn
-      :btntag="ほしい物リストに追加"
-      @click="notificationContent = '商品をほしい物リストに追加しました'"
-    >
-      ほしい物リストに追加
-    </btn>
 
-    <btn
-      :btntag="yeah"
-      @click="notificationContent = '商品をカートに追加しました'"
-    >
-    </btn>
-    <btnDialog
-      :notificationContent="notificationContent"
-      @close="notificationContent = ''"
-    ></btnDialog>
+    <img class="iceImg" v-bind:src="ice[$route.params.id - 1].img_path" />
+    <div class="otherThanImages">
+      <p class="iceName">{{ ice[$route.params.id - 1].name }}</p>
+
+      <p class="icePrice">{{ ice[$route.params.id - 1].price }}</p>
+
+      <p class="iceExplanation">{{ ice[$route.params.id - 1].explanation }}</p>
+
+      <btn
+        :btntag="ほしい物リストに追加"
+        @click="notificationContent = '商品をほしい物リストに追加しました'"
+      >
+      </btn>
+
+      <btn
+        :btntag="カートに追加"
+        @click="notificationContent = '商品をカートに追加しました'"
+      >
+      </btn>
+      <btnDialog
+        :notificationContent="notificationContent"
+        @close="notificationContent = ''"
+      ></btnDialog>
+    </div>
   </div>
 </template>
 
@@ -63,7 +60,11 @@ export default {
   // },
 };
 </script>
-<style>
+<style scoped>
+.all {
+  margin: 75px;
+  color: dimgray;
+}
 #overlay {
   /*要素を重ねた時の順番*/
   z-index: 1;
@@ -81,6 +82,27 @@ export default {
   align-items: center;
   justify-content: center;
 }
+.iceImg {
+  width: 30%;
+  height: 30%;
+  margin: 12px 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.otherThanImages {
+  position: relative;
+  bottom: 425px;
+  left: 550px;
+}
+
+.iceName {
+  font-size: 30px;
+}
+
+.icePrice {
+  color: #ff0066;
+}
+
 .btnDialog {
   padding: 50px;
   background-color: white;

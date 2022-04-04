@@ -1,19 +1,14 @@
 <template>
-  <div>
+  <div class="all">
     <h1>商品一覧</h1>
     <p>トップページ > 商品一覧</p>
     <ul class="container">
-      <li class="item" v-for="value in ice" v-bind:key="value.name">
+      <li class="items" v-for="value in ice" v-bind:key="value.name">
         <router-link :to="{ name: 'show_ice', params: { id: value.id } }">
           <div class="item">
-            <img class="ice" v-bind:src="value.img_path" />
-            <!-- <img class="ice" v-bind:src="img" /> -->
-          </div>
-          <div class="item">
-            <p>{{ value.name }}</p>
-          </div>
-          <div class="item">
-            <p>{{ value.price }}</p>
+            <img class="iceImg" v-bind:src="value.img_path" />
+            <p class="itemText">{{ value.name }}</p>
+            <p class="itemText itemPrice">{{ value.price }}</p>
           </div>
         </router-link>
       </li>
@@ -34,24 +29,41 @@ export default {
     };
   },
 };
-console.log(ice);
 </script>
 
-<style>
+<style scoped>
 .all {
-  max-width: 200px;
-  border: 1px solid;
+  margin: 30px;
+  color: dimgray;
 }
-img.ice {
+img.iceImg {
   width: 50%;
   height: 50%;
-  margin: 12px;
-  -o-object-fit: cover;
-  object-fit: cover;
+  margin: 12px 50px;
+}
+
+.items {
+  display: inline;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
 }
 
 .item {
-  display: inline;
+  border: solid 1px;
+  width: 200px;
+  height: 250px;
+}
+
+.itemText {
+  margin: 12px;
+}
+
+.itemPrice {
+  color: #ff0066;
 }
 
 ul.container {
