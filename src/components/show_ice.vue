@@ -14,17 +14,17 @@
 
       <p class="iceExplanation">{{ ice[$route.params.id - 1].explanation }}</p>
 
-      <btn
-        :btntag="ほしい物リストに追加"
-        @click="notificationContent = '商品をほしい物リストに追加しました'"
-      >
+      <btn @click="notificationContent = '商品をほしい物リストに追加しました'">
+        ほしい物リストに追加
       </btn>
 
       <btn
-        :btntag="カートに追加"
         @click="notificationContent = '商品をカートに追加しました'"
+        class="yellowgreen"
       >
+        カートに追加
       </btn>
+
       <btnDialog
         :notificationContent="notificationContent"
         @close="notificationContent = ''"
@@ -44,20 +44,12 @@ export default {
     console.log("a");
     const dialog = ref(false);
     const notificationContent = ref("");
-    const yeah = "yeah";
     return {
       dialog,
       ice,
       notificationContent,
-      yeah,
     };
   },
-  // data: function () {
-  //   return {
-  //     dialog: false,
-  //     ice,
-  //   };
-  // },
 };
 </script>
 <style scoped>
@@ -101,6 +93,10 @@ export default {
 
 .icePrice {
   color: #ff0066;
+}
+
+.iceExplanation {
+  white-space: pre-wrap;
 }
 
 .btnDialog {

@@ -1,7 +1,7 @@
 <template>
   <div class="all">
-    <h1>商品一覧</h1>
-    <p>トップページ > 商品一覧</p>
+    <h1 class="text">商品一覧</h1>
+    <p class="text">トップページ > 商品一覧</p>
     <ul class="container">
       <li class="items" v-for="value in ice" v-bind:key="value.name">
         <router-link :to="{ name: 'show_ice', params: { id: value.id } }">
@@ -36,6 +36,9 @@ export default {
   margin: 30px;
   color: dimgray;
 }
+.text {
+  margin-left: 40px;
+}
 img.iceImg {
   width: 50%;
   height: 50%;
@@ -56,6 +59,7 @@ a {
   border: solid 1px;
   width: 200px;
   height: 250px;
+  border-radius: 10px;
 }
 
 .itemText {

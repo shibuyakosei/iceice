@@ -1,26 +1,23 @@
 <template>
   <div v-if="notificationContent !== ''" id="overlay">
     <div class="btnDialog">
-      {{ notificationContent }}
-      <button @click="$emit('close')">閉じる</button>
+      <p>{{ notificationContent }}</p>
+      <btn @click="$emit('close')" class="emeraldgreen close">閉じる</btn>
     </div>
   </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
+import btn from "./btn.vue";
 export default defineComponent({
+  components: { btn },
   props: {
     notificationContent: {
       type: String,
       default: "",
     },
   },
-  //   setup() {
-  //     return {
-  //       notificationContent,
-  //     };
-  //   },
 });
 </script>
 
