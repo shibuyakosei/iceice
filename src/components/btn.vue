@@ -24,7 +24,6 @@ button.emeraldgreen {
 }
 button.close {
   width: 60px;
-  margin-left: 78px;
-  text-align: center;
+  margin: auto 36%;
 }
 </style>

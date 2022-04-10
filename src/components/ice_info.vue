@@ -23,8 +23,6 @@ export default {
   data: function () {
     return {
       img: require("../../public/img/mikan.png"),
-      // // name,
-      // price,
       ice,
     };
   },
