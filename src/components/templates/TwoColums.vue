@@ -16,6 +16,8 @@
 
 <style scoped>
 .page_root {
+  padding: 0 50px;
+  margin: 2rem auto;
   display: flex;
   flex-wrap: wrap;
 }
