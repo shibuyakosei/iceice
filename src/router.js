@@ -1,23 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import iceInfo from './components/ice_info.vue'
-import showIce from './components/show_ice.vue'
+import Detail from './components/pages/Detail.vue'
 
 const routes = [
-    {
-        path: '/',
-        name: 'home',
-        component: iceInfo,
-    },
-    {
-        path: '/show_ice/:id',
-        name: 'show_ice',
-        component: showIce,
-    },
+  {
+    path: '/',
+    name: 'home',
+    component: iceInfo,
+  },
+  {
+    path: '/detail/:id',
+    name: 'detail',
+    component: Detail,
+  },
 ]
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
+  history: createWebHistory(),
+  routes,
 })
 
 export default router

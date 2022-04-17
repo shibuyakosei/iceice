@@ -3,8 +3,8 @@
     <h1 class="text">商品一覧</h1>
     <p class="text">トップページ > 商品一覧</p>
     <ul class="container">
-      <li class="items" v-for="value in ice" v-bind:key="value.name">
-        <router-link :to="{ name: 'show_ice', params: { id: value.id } }">
+      <li class="items" v-for="value in iceData" v-bind:key="value.name">
+        <router-link :to="{ name: 'detail', params: { id: value.id } }">
           <div class="item">
             <img class="iceImg" v-bind:src="value.img_path" />
             <p class="itemText">{{ value.name }}</p>
@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import { ice } from "../data/ice.js";
+import iceData from "../data/ice.js";
 
 export default {
   data: function () {
     return {
       img: require("../../public/img/mikan.png"),
-      ice,
+      iceData,
     };
   },
 };

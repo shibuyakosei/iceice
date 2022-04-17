@@ -1,10 +1,10 @@
-const ice = [
+export default [
   {
     id:1,
     img_path: "/img/gari.png",
     name: "ガリガリ君 ソーダ",
     price: "¥60",
-    explanation : `ガリガリ君
+    description : `ガリガリ君
     とってもおいしいよ`,
   },
   {
@@ -12,7 +12,7 @@ const ice = [
     img_path: "/img/mikan.png",
     name: "ガツンとみかん",
     price: "¥40",
-    explanation : `ガツンとみかん
+    description : `ガツンとみかん
     とってもおいしいよ`,
   },
   {
@@ -20,7 +20,7 @@ const ice = [
     img_path: "/img/homerun.png",
     name: "ホームランバー",
     price: "¥30",
-    explanation : `ホームランバー
+    description : `ホームランバー
     とってもおいしいよ`,
   },
   {
@@ -28,7 +28,7 @@ const ice = [
     img_path: "/img/mow.png",
     name: "モウ",
     price: "¥60",
-    explanation : `モウ
+    description : `モウ
     とってもおいしいよ`,
   },
   {
@@ -36,7 +36,7 @@ const ice = [
     img_path: "/img/parm.png",
     name: "パルム",
     price: "¥80",
-    explanation : `パルム
+    description : `パルム
     とってもおいしいよ`,
   },
   {
@@ -44,7 +44,7 @@ const ice = [
     img_path: "/img/gari.png",
     name: "ガリガリ君 ソーダ",
     price: "¥60",
-    explanation : `ガリガリ君
+    description : `ガリガリ君
     とってもおいしいよ`,
   },
   {
@@ -52,7 +52,7 @@ const ice = [
     img_path: "/img/mikan.png",
     name: "ガツンとみかん",
     price: "¥40",
-    explanation : `ガツンとみかん
+    description : `ガツンとみかん
     とってもおいしいよ`,
   },
   {
@@ -60,7 +60,7 @@ const ice = [
     img_path: "/img/homerun.png",
     name: "ホームランバー",
     price: "¥30",
-    explanation : `ホームランバー
+    description : `ホームランバー
     とってもおいしいよ`,
   },
   {
@@ -68,7 +68,7 @@ const ice = [
     img_path: "/img/mow.png",
     name: "モウ",
     price: "¥60",
-    explanation : `モウ
+    description : `モウ
     とってもおいしいよ`,
   },
   {
@@ -76,7 +76,7 @@ const ice = [
     img_path: "/img/parm.png",
     name: "パルム",
     price: "¥80",
-    explanation : `パルム
+    description : `パルム
     とってもおいしいよ`,
   },
   {
@@ -84,7 +84,7 @@ const ice = [
     img_path: "/img/gari.png",
     name: "ガリガリ君 ソーダ",
     price: "¥60",
-    explanation : `ガリガリ君
+    description : `ガリガリ君
     とってもおいしいよ`,
   },
   {
@@ -92,7 +92,7 @@ const ice = [
     img_path: "/img/mikan.png",
     name: "ガツンとみかん",
     price: "¥40",
-    explanation : `ガツンとみかん
+    description : `ガツンとみかん
     とってもおいしいよ`,
   },
   {
@@ -100,7 +100,7 @@ const ice = [
     img_path: "/img/homerun.png",
     name: "ホームランバー",
     price: "¥30",
-    explanation : `ホームランバー
+    description : `ホームランバー
     とってもおいしいよ`,
   },
   {
@@ -108,7 +108,7 @@ const ice = [
     img_path: "/img/mow.png",
     name: "モウ",
     price: "¥60",
-    explanation : `モウ
+    description : `モウ
     とってもおいしいよ`,
   },
   {
@@ -116,8 +116,7 @@ const ice = [
     img_path: "/img/parm.png",
     name: "パルム",
     price: "¥80",
-    explanation : `パルム
+    description : `パルム
     とってもおいしいよ`,
   },
 ];
-export { ice };
